@@ -18,14 +18,25 @@ This repo contains the NixOps DigitalOcean Plugin.
 To start developing on the NixOps DigitalOcean plugin, you can run:
 
 ```bash
-  $ ./dev-shell
+  $ nix-shell
+  $ poetry install
+  $ poetry shell
 ```
+
+To view active plugins:
+
+```bash
+  $ nixops list-plugins
+```
+
+The python code should be formatted with the latest release of [black](https://black.readthedocs.io/en/stable)
+
+The nix code should be formatted with nixfmt or nixpkgs-fmt...
 
 ## Building from source
 
-The command to build NixOps depends on your platform.
+You can build the Nix package by simply invoking nix-build on the project root:
 
-See the main NixOps repo instructions for how to built NixOps
-with this DigitalOcean plugin.
-
-This document is a work in progress.
+```bash
+  $ nix-build
+```
